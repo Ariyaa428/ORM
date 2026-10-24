@@ -1,5 +1,5 @@
 # Ex02 Django ORM Web Application
-## Date: 
+## Date: 10.10.2026
 
 ## AIM
 To develop a Django Application to store and retrieve data from a Vehicle Service Database platform using Object Relational Mapping(ORM).
@@ -31,12 +31,27 @@ Apply the migration files of the created app to the database
 Execute Django admin using localhost and create details for 10 entries
 
 ## PROGRAM
+```
+from django.db import models
+from django.contrib import admin 
+class blinkit(models.Model):
+    Name=models.CharField(max_length=10)
+    Address=models.TextField()
+    Delvivery_Id=models.IntegerField()
+    Productname=models.CharField(max_length=10)
+    Quantity=models.IntegerField()
+    price=models.IntegerField()
+    Mobile_Number=models.IntegerField(primary_key=True)
+    
 
+class blinkitadmin(admin.ModelAdmin):
+    list_display=["Name","Address","Delvivery_Id","Productname","Quantity","price","Mobile_Number"]
+```
 
 
 ## OUTPUT
 
-
+![alt text](<Screenshot 2026-10-24 144110.png>)
 
 ## RESULT
 Thus the program for creating vehicle service Database using ORM hss been executed successfully.
