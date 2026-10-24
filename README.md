@@ -32,6 +32,7 @@ Execute Django admin using localhost and create details for 10 entries
 
 ## PROGRAM
 ```
+models.py
 from django.db import models
 from django.contrib import admin 
 class blinkit(models.Model):
@@ -46,6 +47,10 @@ class blinkit(models.Model):
 
 class blinkitadmin(admin.ModelAdmin):
     list_display=["Name","Address","Delvivery_Id","Productname","Quantity","price","Mobile_Number"]
+admin.py
+from django.contrib import admin
+from.models import blinkit,blinkitadmin
+admin.site.register(blinkit,blinkitadmin)
 ```
 
 
